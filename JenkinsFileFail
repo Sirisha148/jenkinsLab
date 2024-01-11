@@ -1,0 +1,16 @@
+pipeline {
+agent any
+stages {
+stage('Example') {
+steps {
+echo 'Hello World'
+error('Build Failed')
+}
+}
+}
+post {
+always {
+echo 'Build Failed'
+}
+}
+}
